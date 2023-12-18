@@ -1,11 +1,11 @@
 {% extends 'base.html '%} {% block content %}
 
 <div style="width: 50%; height: 500px; margin: auto" class="pt-5">
-  <h3>Movie Rating Form</h3>
+  <h3 class="text-center">django Form</h3>
   <form method="post" action="about">
     {% csrf_token %}
     <div class="mb-3">
-      <label for="exampleInputName" class="form-label">Name</label>
+      <label for="exampleInputName" class="form-label">Enter your Name</label>
       <input
         type="text"
         class="form-control"
@@ -15,7 +15,9 @@
       />
     </div>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <label for="exampleInputEmail1" class="form-label">
+        Enter your Email address</label
+      >
       <input
         type="email"
         class="form-control"
@@ -29,7 +31,7 @@
       aria-label="Default select example"
       name="select"
     >
-      <option selected>Ratings</option>
+      <option selected>Reviews</option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
