@@ -5,5 +5,6 @@ urlpatterns = [
     path('form', views.submit_form, name="submit_form"),
     path('about', views.about, name="about"),
     path('practice_form', views.DjangoForm, name="practice_form"),
-    path('geekForGeek', views.geekForm, name="geekForGeek")
+    path('geekForGeek', views.geekForm, name="geekForGeek"),
+    path('add', views.add_geekModel, name="add_model")
 ]

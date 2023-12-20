@@ -1,5 +1,24 @@
 {% extends "base.html" %} {% block content %}
-<h1>name: {{name}}</h1>
-<h1>email: {{email}}</h1>
-<h1>select: {{select}}</h1>
-{% endblock %}
+<h1>this is home page</h1>
+{% if data %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for st in data %}
+    <tr>
+      <td>{{st.title}}</td>
+      <td>{{st.description}}</td>
+      <td></td>
+    </tr>
+
+    {%endfor%}
+  </tbody>
+</table>
+{% else %}
+<h3>No data available to show</h3>
+{% endif%} {% endblock %}
